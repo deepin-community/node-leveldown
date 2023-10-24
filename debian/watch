@@ -1,0 +1,20 @@
+version=4
+opts=\
+dversionmangle=auto,\
+repacksuffix=+dfsg,\
+filenamemangle=s/.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-leveldown-$1/ \
+ https://github.com/Level/leveldown/tags .*/archive/.*/v?([\d\.]+).tar.gz
+
+opts=\
+ctype=nodejs,\
+component=napi-macros,\
+dversionmangle=auto,\
+filenamemangle=s/.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-napi-macros-$1/ \
+ https://github.com/mafintosh/napi-macros/tags .*/archive/.*/v?([\d\.]+).tar.gz ignore
+
+opts=\
+ctype=nodejs,\
+component=node-gyp-build,\
+dversionmangle=auto,\
+filenamemangle=s/.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-node-gyp-build-$1/ \
+ https://github.com/prebuild/node-gyp-build/tags .*/archive/.*/v?([\d\.]+).tar.gz ignore

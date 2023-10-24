@@ -1,0 +1,36 @@
+Description: modify tests to use shared libraries
+Author: Xavier Guimard <yadd@debian.org>
+Forwarded: not-needed
+Last-Update: 2020-01-23
+
+--- a/test/abstract-leveldown-test.js
++++ b/test/abstract-leveldown-test.js
+@@ -1 +1 @@
+-require('abstract-leveldown/test')(require('./common'))
++require('../debian/tests/abstract-leveldown-tests')(require('./common'))
+--- a/test/common.js
++++ b/test/common.js
+@@ -1,7 +1,7 @@
+ const test = require('tape')
+ const tempy = require('tempy')
+ const leveldown = require('..')
+-const suite = require('abstract-leveldown/test')
++const suite = require('../debian/tests/abstract-leveldown-tests')
+ 
+ module.exports = suite.common({
+   test: test,
+--- a/test/port-libuv-fix-test.js
++++ b/test/port-libuv-fix-test.js
+@@ -2,6 +2,7 @@
+ const path = require('path')
+ const fs = require('fs')
+ 
++/*
+ test('test port-libuv is being used', function (t) {
+   var version = fs.readFileSync(path.join(__dirname, '../deps/leveldb/leveldb.gyp'), 'utf8')
+     .match(/"ldbversion": "([^"]+)"/)[1]
+@@ -15,3 +16,4 @@
+ 
+   t.end()
+ })
++*/

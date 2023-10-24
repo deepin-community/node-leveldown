@@ -1,0 +1,62 @@
+{
+  "_from": "mkfiletree@^2.0.0",
+  "_id": "mkfiletree@2.0.0",
+  "_inBundle": false,
+  "_integrity": "sha512-nz4aJmUiPkBM4uqFpQG/kaxRMwxd5T7l/Loy5kOsUoHQVB3cCXGBAo1PemsktJXDgHI4tdNJz0xr2/NGqIZc6Q==",
+  "_location": "/mkfiletree",
+  "_phantomChildren": {
+    "glob": "7.1.6"
+  },
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "mkfiletree@^2.0.0",
+    "name": "mkfiletree",
+    "escapedName": "mkfiletree",
+    "rawSpec": "^2.0.0",
+    "saveSpec": null,
+    "fetchSpec": "^2.0.0"
+  },
+  "_requiredBy": [
+    "#DEV:/"
+  ],
+  "_resolved": "https://registry.npmjs.org/mkfiletree/-/mkfiletree-2.0.0.tgz",
+  "_shasum": "740bf34a226e3331550030ac88a51c4d59567cc3",
+  "_spec": "mkfiletree@^2.0.0",
+  "_where": "/home/xavier/dev/debian/src/pkg-js/packages/node-leveldown",
+  "author": {
+    "name": "Rod Vagg @rvagg",
+    "email": "rod@vagg.org"
+  },
+  "bugs": {
+    "url": "https://github.com/rvagg/node-mkfiletree/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "after": "~0.8.2",
+    "rimraf": "~2.6.3",
+    "temp": "~0.9.0"
+  },
+  "deprecated": false,
+  "description": "Make a tree of files and directories from data defined in an object",
+  "devDependencies": {
+    "xregexp": "~2.0.0"
+  },
+  "homepage": "https://github.com/rvagg/node-mkfiletree#readme",
+  "keywords": [
+    "temp",
+    "tree",
+    "test",
+    "serialize"
+  ],
+  "main": "mkfiletree.js",
+  "name": "mkfiletree",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rvagg/node-mkfiletree.git"
+  },
+  "scripts": {
+    "test": "node tests.js"
+  },
+  "version": "2.0.0"
+}

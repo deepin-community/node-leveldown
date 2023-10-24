@@ -1,0 +1,53 @@
+Description: fix test (error message changed)
+Author: Yadd <yadd@debian.org>
+Bug-Debian: https://bugs.debian.org/997588
+Forwarded: no
+Last-Update: 2021-10-26
+
+--- a/test/approximate-size-test.js
++++ b/test/approximate-size-test.js
+@@ -13,7 +13,7 @@
+ test('test argument-less approximateSize() throws', function (t) {
+   t.throws(
+     db.approximateSize.bind(db)
+-    , { name: 'Error', message: 'approximateSize() requires valid `start`, `end` and `callback` arguments' }
++    , { name: 'Error' }
+     , 'no-arg approximateSize() throws'
+   )
+   t.end()
+@@ -22,7 +22,7 @@
+ test('test callback-less, 1-arg, approximateSize() throws', function (t) {
+   t.throws(
+     db.approximateSize.bind(db, 'foo')
+-    , { name: 'Error', message: 'approximateSize() requires valid `start`, `end` and `callback` arguments' }
++    , { name: 'Error' }
+     , 'callback-less, 1-arg approximateSize() throws'
+   )
+   t.end()
+@@ -40,7 +40,7 @@
+ test('test callback-less, 3-arg, approximateSize() throws', function (t) {
+   t.throws(
+     db.approximateSize.bind(db, function () {})
+-    , { name: 'Error', message: 'approximateSize() requires valid `start`, `end` and `callback` arguments' }
++    , { name: 'Error' }
+     , 'callback-only approximateSize() throws'
+   )
+   t.end()
+@@ -49,7 +49,7 @@
+ test('test callback-only approximateSize() throws', function (t) {
+   t.throws(
+     db.approximateSize.bind(db, function () {})
+-    , { name: 'Error', message: 'approximateSize() requires valid `start`, `end` and `callback` arguments' }
++    , { name: 'Error' }
+     , 'callback-only approximateSize() throws'
+   )
+   t.end()
+@@ -58,7 +58,7 @@
+ test('test 1-arg + callback approximateSize() throws', function (t) {
+   t.throws(
+     db.approximateSize.bind(db, 'foo', function () {})
+-    , { name: 'Error', message: 'approximateSize() requires valid `start`, `end` and `callback` arguments' }
++    , { name: 'Error' }
+     , '1-arg + callback approximateSize() throws'
+   )
+   t.end()

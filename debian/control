@@ -1,15 +1,43 @@
-Source: template-repository
-Section: unknown
+Source: node-leveldown
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Yadd <yadd@debian.org>
+Section: javascript
+Testsuite: autopkgtest-pkg-nodejs
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Build-Depends:
+ debhelper-compat (= 13)
+ , libleveldb-dev
+ , libnode-dev
+ , libsnappy-dev
+ , node-abstract-leveldown
+ , node-after <!nocheck>
+ , node-async-each <!nocheck>
+ , node-bindings
+ , node-gyp
+ , node-nan
+ , node-tape <!nocheck>
+ , node-temp <!nocheck>
+ , node-unique-string <!nocheck>
+ , dh-sequence-nodejs
+Standards-Version: 4.6.0
+Vcs-Browser: https://salsa.debian.org/js-team/node-leveldown
+Vcs-Git: https://salsa.debian.org/js-team/node-leveldown.git
+Homepage: https://github.com/Level/leveldown
+Rules-Requires-Root: no
 
-Package: template-repository
+Package: node-leveldown
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Multi-Arch: same
+Depends:
+ ${misc:Depends}
+ , ${shlibs:Depends}
+ , node-abstract-leveldown
+ , node-bindings
+ , node-nan
+ , nodejs
+Description: LevelDB bindings - Node.js module
+ LevelDOWN provides a Node.js JavaScript API to the LevelDB C library. It
+ provides the ability to open and close a LevelDB instance, as well as the
+ put, get, del, and batch operations.
+ .
+ Node.js is an event-based server-side javascript engine.
