@@ -1,4 +1,22 @@
 #!/usr/bin/make -f
+# -*- makefile -*-
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+SHLIBSDIR = debian/node-leveldown/usr/lib/nodejs/leveldown/build
+SHLIBS = leveldown.node
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
 
 %:
 	dh $@
+
+override_dh_auto_build:
+	node-gyp configure build
+
+override_dh_auto_clean:
+	node-gyp clean
+	dh_auto_clean --buildsystem=nodejs
+
+override_dh_installchangelogs:
+	dh_installchangelogs CHANGELOG.md

@@ -1,0 +1,59 @@
+{
+  "_from": "readfiletree@^1.0.0",
+  "_id": "readfiletree@1.0.0",
+  "_inBundle": false,
+  "_integrity": "sha512-Vs6FkJosnsuY60hTPdFavKrJKrUi5lbHwDcQRZxDBpRHBEip6UVv+2cRgrgydOsCDlfiEhzwar830ywpmu8eVQ==",
+  "_location": "/readfiletree",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "readfiletree@^1.0.0",
+    "name": "readfiletree",
+    "escapedName": "readfiletree",
+    "rawSpec": "^1.0.0",
+    "saveSpec": null,
+    "fetchSpec": "^1.0.0"
+  },
+  "_requiredBy": [
+    "#DEV:/"
+  ],
+  "_resolved": "https://registry.npmjs.org/readfiletree/-/readfiletree-1.0.0.tgz",
+  "_shasum": "9871c53feaadb1a16b18da10da92ec4692da6f4c",
+  "_spec": "readfiletree@^1.0.0",
+  "_where": "/home/xavier/dev/debian/src/pkg-js/packages/node-leveldown",
+  "author": {
+    "name": "Rod Vagg @rvagg",
+    "email": "rod@vagg.org"
+  },
+  "bugs": {
+    "url": "https://github.com/rvagg/node-readfiletree/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "after": "~0.8.2"
+  },
+  "deprecated": false,
+  "description": "Serialize a tree of files and directories into object form",
+  "devDependencies": {
+    "mkfiletree": "~2.0.0"
+  },
+  "homepage": "https://github.com/rvagg/node-readfiletree#readme",
+  "keywords": [
+    "temp",
+    "tree",
+    "test",
+    "serialize",
+    "deserialize"
+  ],
+  "main": "readfiletree.js",
+  "name": "readfiletree",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rvagg/node-readfiletree.git"
+  },
+  "scripts": {
+    "test": "node tests.js"
+  },
+  "version": "1.0.0"
+}

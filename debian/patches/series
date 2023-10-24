@@ -1,0 +1,4 @@
+use-system-libs.patch
+adapt-tests.patch
+fix-test.patch
+armel_no_hard.patch

@@ -1,5 +1,126 @@
-template-repository (1.0-1) unstable; urgency=medium
+node-leveldown (5.6.0+dfsg-4) unstable; urgency=medium
 
-  * Initial release
+  * Team upload.
+  * Patch removes float-abi=hard flag for armel
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Jérémy Lal <kapouer@melix.org>  Tue, 30 Aug 2022 21:54:01 +0200
+
+node-leveldown (5.6.0+dfsg-3) unstable; urgency=medium
+
+  * Fix autopkgtest: skip require test
+
+ -- Yadd <yadd@debian.org>  Tue, 26 Oct 2021 22:46:36 +0200
+
+node-leveldown (5.6.0+dfsg-2) unstable; urgency=medium
+
+  [ Jenkins ]
+  * Remove constraints unnecessary since stretch
+
+  [ Yadd ]
+  * Add ctype=nodejs to component(s)
+  * Fix GitHub tags regex
+  * Update standards version to 4.6.0, no changes needed.
+  * Fix filenamemangle
+  * Fix test (error messages changed) (Closes: #997588)
+
+ -- Yadd <yadd@debian.org>  Tue, 26 Oct 2021 09:39:23 +0200
+
+node-leveldown (5.6.0+dfsg-1) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Submit.
+  * Remove obsolete fields Contact, Name from debian/upstream/metadata (already
+    present in machine-readable debian/copyright).
+
+  [ Xavier Guimard ]
+  * Bump debhelper compatibility level to 13
+  * Declare compliance with policy 4.5.1
+  * Modernize debian/watch
+  * Use dh-sequence-nodejs
+  * New upstream version 5.6.0+dfsg
+  * Apply multi-arch hints (same)
+
+ -- Xavier Guimard <yadd@debian.org>  Mon, 23 Nov 2020 13:53:34 +0100
+
+node-leveldown (5.4.1+dfsg-2) unstable; urgency=medium
+
+  * Back to unstable
+  * Add lintian overrides
+
+ -- Xavier Guimard <yadd@debian.org>  Fri, 21 Feb 2020 00:01:17 +0100
+
+node-leveldown (5.4.1+dfsg-1) experimental; urgency=medium
+
+  * Bump debhelper compatibility level to 12
+  * Declare compliance with policy 4.5.0
+  * Add "Rules-Requires-Root: no"
+  * Use pkg-js-tools auto install
+  * Remove embedded fast-future
+  * Embed components: napi-macros node-gyp-build
+  * New upstream version 5.4.1+dfsg
+  * Refresh patch
+  * Copy abstract-leveldown test files, needed for tests
+  * Embed delayed, du, map-async, mkfiletree, readfiletree, temp-dir and tempy for tests only
+  * Enable upstream test
+  * Update copyright
+
+ -- Xavier Guimard <yadd@debian.org>  Sun, 02 Feb 2020 10:52:59 +0100
+
+node-leveldown (1.5.0+dfsg-3) unstable; urgency=medium
+
+  * Build against libnode-dev
+
+ -- Xavier Guimard <yadd@debian.org>  Fri, 25 Jan 2019 13:39:54 +0100
+
+node-leveldown (1.5.0+dfsg-2) unstable; urgency=medium
+
+  * Replace Andrew by myself in uploaders list. Thanks for your work
+    (Closes: #909876)
+  * Fix quoting in autopkgtest control file (Closes: #894942)
+  * Change priority to optional
+  * Bump debhelper compatibility level to 11
+  * Declare compliance with policy 4.3.0
+  * Fix VCS fields to salsa
+  * Remove useless Testsuite header
+  * Add upstream/metadata
+  * Add hardening flags
+  * Change section to javascript
+
+ -- Xavier Guimard <yadd@debian.org>  Fri, 25 Jan 2019 12:01:14 +0100
+
+node-leveldown (1.5.0+dfsg-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream version 1.5.0+dfsg
+  * leveldb tarball no longer in upstream source
+  * Add repacksuffix in watch file, use dversionmangle
+  * Standards-Version 3.9.8
+  * Fix Testsuite field
+  * Secure Vcs url
+  * Use dh nodejs
+
+ -- Jérémy Lal <kapouer@melix.org>  Tue, 20 Dec 2016 16:10:31 +0100
+
+node-leveldown (1.4.1+dfsg-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream release
+    - Fix build against newer nan. Closes: #798162
+  * Bump dependency versions
+
+ -- Felipe Sateler <fsateler@debian.org>  Mon, 14 Dec 2015 21:21:33 -0300
+
+node-leveldown (1.0.6+dfsg-1) unstable; urgency=medium
+
+  * Import upstream version 1.0.6.
+  * Update upstream URL from rvagg/node-leveldown to Level/leveldown.
+  * Bump standards version to 3.9.6.
+  * Bump node-nan build dependency version to >= 1.8.4.
+
+ -- Andrew Kelley <superjoe30@gmail.com>  Sat, 16 May 2015 22:53:52 +0000
+
+node-leveldown (1.0.0+dfsg-1) unstable; urgency=low
+
+  * Initial release. (Closes: #753278)
+
+ -- Andrew Kelley <superjoe30@gmail.com>  Fri, 12 Sep 2014 19:38:52 -0300

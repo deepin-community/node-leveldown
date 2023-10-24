@@ -1,0 +1,1 @@
+NODE_PATH=/usr/share/nodejs/abstract-leveldown/node_modules:debian/tests/test_modules:node_modules tape test/*-test.js

@@ -1,0 +1,28 @@
+Description: build against system libraries
+ The default behavior of this module is to build against a bundled leveldb
+ and snappy. This patch makes this module build against libleveldb-dev and
+ libsnappy-dev.
+Author: Andrew Kelley <superjoe30@gmail.com>
+Forwarded: not-needed
+Reviewed-By: Xavier Guimard <yadd@debian.org>
+Last-Update: 2020-01-23
+
+--- a/binding.gyp
++++ b/binding.gyp
+@@ -39,12 +39,13 @@
+         "cflags": [ "-mfloat-abi=hard" ]
+       }]
+     ],
+-    "dependencies": [
+-      "<(module_root_dir)/deps/leveldb/leveldb.gyp:leveldb"
+-    ],
+     "include_dirs"  : [
+       "<!(node -e \"require('napi-macros')\")"
+     ],
++    "libraries"  : [
++      "-lleveldb",
++      "-lsnappy"
++    ],
+     "sources": [
+       "binding.cc"
+     ]

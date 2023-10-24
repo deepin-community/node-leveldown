@@ -1,0 +1,16 @@
+Description: remove float-abi flag on arm, let environment decide
+Last-Update: 2022-08-30
+Author: Jérémy Lal <kapouer@melix.org>
+Forwarded: not-needed, but might be eventually
+--- a/binding.gyp
++++ b/binding.gyp
+@@ -34,9 +34,6 @@
+           "-fPIE"
+         ],
+         "ldflags!": [ "-fPIE" ]
+-      }],
+-      ["target_arch == 'arm'", {
+-        "cflags": [ "-mfloat-abi=hard" ]
+       }]
+     ],
+     "include_dirs"  : [

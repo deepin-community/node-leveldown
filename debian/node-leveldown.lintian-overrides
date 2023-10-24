@@ -1,0 +1,4 @@
+# False positive: internal usage only
+node-leveldown: script-not-executable usr/lib/x86_64-linux-gnu/nodejs/leveldown/node_modules/node-gyp-build/bin.js
+node-leveldown: script-not-executable usr/lib/x86_64-linux-gnu/nodejs/leveldown/node_modules/node-gyp-build/build-test.js
+node-leveldown: script-not-executable usr/lib/x86_64-linux-gnu/nodejs/leveldown/node_modules/node-gyp-build/optional.js
